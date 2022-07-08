@@ -1,5 +1,4 @@
-require("@nomiclabs/hardhat-waffle");
-require("@nomiclabs/hardhat-web3");
+require("@nomicfoundation/hardhat-toolbox");
 
 module.exports = {
   networks: {

@@ -1,5 +1,8 @@
 pragma solidity ^0.4.21;
 
+/**
+    it is posible to access to the storage of the contract and see wich number is the answer
+ */
 contract GuessTheRandomNumberChallenge {
     uint8 answer;
 
