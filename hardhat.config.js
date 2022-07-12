@@ -1,12 +1,25 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("@nomicfoundation/hardhat-chai-matchers");
+require("hardhat-storage-layout");
 
 module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: "https://speedy-nodes-nyc.moralis.io/69e5a6d7dc8571dc88d12837/eth/ropsten/archive",
+        url: "https://ropsten.infura.io/v3/c78b9b37c9e146689c1199dbf4904057",
       },
     },
   },
   solidity: "0.4.21",
+  settings: {
+    optimizer: {
+      enabled: true,
+      runs: 1000,
+    },
+    outputSelection: {
+      "*": {
+        "*": ["storageLayout"],
+      },
+    },
+  },
 };
